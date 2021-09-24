@@ -1,17 +1,24 @@
+#include<sstream>
 #include<iostream>
-#include<string>
 #include<vector>
 
 using namespace std;
-int  main()
+
+int main()
 {
-    vector<int> arr{};
-    string ch{};
-    int len{};
-    getline(cin,ch);
-    for(auto d: ch)
+    string s ;
+    int nums{},count{};
+    string ch{},num{};
+    getline(cin,s);
+    nums = s.length();
+    for(int i=0; i<s.length(); i++)
     {
-        if(d!=',')
-            cout<<d<<endl;
+        if(s!=",")
+        {
+            num = s[i];
+            nums = stoi(num);
+            cout<<nums<<endl;
+        }
+        
     }
 }
